@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+
+  <title>Projet</title>
+  <script src="calcul.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+<div id="container_left">
+
+  <div id="container_chiffreA">
+    <label>Chiffre A</label>
+     <input type="text" placeholder="entrez un numéro" id="chiffre1"/>
+  </div>
+
+  <div id="container_chiffreB">
+    <label>Chiffre B</label>
+    <input type="text" placeholder="entrez un numéro" id="chiffre2"/>
+  </div>
+
+  <div id="container_button">
+    <input type="button" onclick="clickButtonCalcul()" value="Résultat"/>
+  </div>
+
+</div>
+
+<div id="container_right">
+
+  <div id="container_chiffreA">
+      <label>A/B = </label>
+      <div id="resultat_division"></div>
+  </div>
+
+  <div id="container_chiffreB">
+      <label>A*B = </label>
+      <div id="resultat_multiplication"></div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+
+function clickButtonCalcul() {
+  var resultat = calcul(document.getElementById('chiffre1').value, document.getElementById('chiffre2').value)
+
+  document.getElementById('resultat_division').innerHTML = resultat.resultat_division
+  document.getElementById('resultat_multiplication').innerHTML = resultat.resultat_multiplication
+}
+</script>
+
+</body>
+</html>
